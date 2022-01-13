@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/run/media/atharva/nux/ece540_rvfpga_sources/examples/AL_Operations'
+make: Leaving directory '/run/media/atharva/nux/ece540_rvfpga_sources/examples/AL_Operations'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 
