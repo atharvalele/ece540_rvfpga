@@ -73,6 +73,20 @@ wire        wb_s2m_gpio_ack;
 wire        wb_s2m_gpio_err;
 wire        wb_s2m_gpio_rty;
 
+// GPIO Push Buttons
+wire [31:0] wb_m2s_gpio_push_btn_adr;
+wire [31:0] wb_m2s_gpio_push_btn_dat;
+wire  [3:0] wb_m2s_gpio_push_btn_sel;
+wire        wb_m2s_gpio_push_btn_we;
+wire        wb_m2s_gpio_push_btn_cyc;
+wire        wb_m2s_gpio_push_btn_stb;
+wire  [2:0] wb_m2s_gpio_push_btn_cti;
+wire  [1:0] wb_m2s_gpio_push_btn_bte;
+wire [31:0] wb_s2m_gpio_push_btn_dat;
+wire        wb_s2m_gpio_push_btn_ack;
+wire        wb_s2m_gpio_push_btn_err;
+wire        wb_s2m_gpio_push_btn_rty;
+
 // PTC
 wire [31:0] wb_m2s_ptc_adr;
 wire [31:0] wb_m2s_ptc_dat;
@@ -177,6 +191,19 @@ wb_intercon wb_intercon0
     .wb_gpio_ack_i      (wb_s2m_gpio_ack),
     .wb_gpio_err_i      (wb_s2m_gpio_err),
     .wb_gpio_rty_i      (wb_s2m_gpio_rty),
+// GPIO Push Buttons
+    .wb_gpio_push_btn_adr_o      (wb_m2s_gpio_push_btn_adr),
+    .wb_gpio_push_btn_dat_o      (wb_m2s_gpio_push_btn_dat),
+    .wb_gpio_push_btn_sel_o      (wb_m2s_gpio_push_btn_sel),
+    .wb_gpio_push_btn_we_o       (wb_m2s_gpio_push_btn_we),
+    .wb_gpio_push_btn_cyc_o      (wb_m2s_gpio_push_btn_cyc),
+    .wb_gpio_push_btn_stb_o      (wb_m2s_gpio_push_btn_stb),
+    .wb_gpio_push_btn_cti_o      (wb_m2s_gpio_push_btn_cti),
+    .wb_gpio_push_btn_bte_o      (wb_m2s_gpio_push_btn_bte),
+    .wb_gpio_push_btn_dat_i      (wb_s2m_gpio_push_btn_dat),
+    .wb_gpio_push_btn_ack_i      (wb_s2m_gpio_push_btn_ack),
+    .wb_gpio_push_btn_err_i      (wb_s2m_gpio_push_btn_err),
+    .wb_gpio_push_btn_rty_i      (wb_s2m_gpio_push_btn_rty),
 // PTC
     .wb_ptc_adr_o      (wb_m2s_ptc_adr),
     .wb_ptc_dat_o      (wb_m2s_ptc_dat),
