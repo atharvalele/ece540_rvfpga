@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Fri Jan 21 12:48:09 2022
+| Date             : Fri Jan 28 15:36:50 2022
 | Host             : drogon running 64-bit EndeavourOS Linux
 | Command          : report_power -file rvfpganexys_power_routed.rpt -pb rvfpganexys_power_summary_routed.pb -rpx rvfpganexys_power_routed.rpx
 | Design           : rvfpganexys
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.934        |
+| Total On-Chip Power (W)  | 0.932        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.824        |
+| Dynamic (W)              | 0.823        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 80.7         |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.043 |       13 |       --- |             --- |
-| Slice Logic              |     0.017 |    61859 |       --- |             --- |
-|   LUT as Logic           |     0.015 |    34102 |     63400 |           53.79 |
+| Slice Logic              |     0.017 |    61888 |       --- |             --- |
+|   LUT as Logic           |     0.015 |    34099 |     63400 |           53.78 |
 |   LUT as Distributed RAM |    <0.001 |      292 |     19000 |            1.54 |
 |   CARRY4                 |    <0.001 |      845 |     15850 |            5.33 |
-|   Register               |    <0.001 |    19427 |    126800 |           15.32 |
-|   F7/F8 Muxes            |    <0.001 |      542 |     63400 |            0.85 |
+|   Register               |    <0.001 |    19451 |    126800 |           15.34 |
+|   F7/F8 Muxes            |    <0.001 |      546 |     63400 |            0.86 |
 |   LUT as Shift Register  |    <0.001 |        3 |     19000 |            0.02 |
 |   Others                 |     0.000 |     1193 |       --- |             --- |
-| Signals                  |     0.025 |    50652 |       --- |             --- |
-| Block RAM                |     0.068 |       44 |       135 |           32.59 |
+| Signals                  |     0.025 |    50671 |       --- |             --- |
+| Block RAM                |     0.067 |       44 |       135 |           32.59 |
 | PLL                      |     0.278 |        2 |         6 |           33.33 |
 | DSPs                     |    <0.001 |        4 |       240 |            1.67 |
-| I/O                      |     0.393 |      109 |       210 |           51.90 |
+| I/O                      |     0.392 |      110 |       210 |           52.38 |
 | Static Power             |     0.110 |          |           |                 |
-| Total                    |     0.934 |          |           |                 |
+| Total                    |     0.932 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,7 +77,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.197 |       0.179 |      0.019 |
+| Vccint    |       1.000 |     0.197 |       0.178 |      0.019 |
 | Vccaux    |       1.800 |     0.196 |       0.178 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -156,7 +156,7 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| rvfpganexys             |     0.824 |
+| rvfpganexys             |     0.823 |
 |   cdc                   |     0.007 |
 |     i_axi_cdc           |     0.007 |
 |       i_cdc_fifo_gray_r |     0.005 |
@@ -183,14 +183,14 @@ Table of Contents
 |       IOBUF_9           |     0.008 |
 |       OBUFDS            |     0.008 |
 |       serv_rf_top       |     0.004 |
-|   swervolf              |     0.091 |
+|   swervolf              |     0.090 |
 |     axi2wb              |     0.002 |
 |     axi_intercon        |     0.003 |
 |       axi_xbar          |     0.003 |
-|     bootrom             |     0.003 |
-|       ram               |     0.003 |
-|     swerv_eh1           |     0.078 |
-|       mem               |     0.045 |
+|     bootrom             |     0.002 |
+|       ram               |     0.002 |
+|     swerv_eh1           |     0.077 |
+|       mem               |     0.044 |
 |       swerv             |     0.033 |
 |     syscon              |     0.001 |
 |     timer_ptc           |     0.001 |

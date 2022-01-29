@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Fri Jan 21 12:32:09 2022
-# Process ID: 20434
+# Start of session at: Fri Jan 28 15:19:03 2022
+# Process ID: 38489
 # Current directory: /run/media/atharva/nux/ece540_rvfpga_sources/Labs/Lab6/project_2_lab6/project_2_lab6.runs/synth_1
 # Command line: vivado -log rvfpganexys.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rvfpganexys.tcl
 # Log file: /run/media/atharva/nux/ece540_rvfpga_sources/Labs/Lab6/project_2_lab6/project_2_lab6.runs/synth_1/rvfpganexys.vds
@@ -16,21 +16,24 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 20493 
+INFO: Helper process launched with PID 38653 
 WARNING: [Synth 8-1921] elaboration system task error violates IEEE 1800 syntax [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/SweRVEh1CoreComplex/lib/beh_lib.sv:230]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axi2wb with formal parameter declaration list [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:83]
 WARNING: [Synth 8-2507] parameter declaration becomes local in axi2wb with formal parameter declaration list [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Interconnect/AxiToWb/axi2wb.v:93]
-WARNING: [Synth 8-6901] identifier 'Enables_Reg' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:222]
-WARNING: [Synth 8-6901] identifier 'Digits_Reg' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:225]
-WARNING: [Synth 8-6901] identifier 'Digits_Reg' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:226]
-WARNING: [Synth 8-6901] identifier 'Digits_Reg' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:227]
-WARNING: [Synth 8-6901] identifier 'Digits_Reg' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:228]
-WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:299]
-WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode of verilog [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:323]
-WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode of verilog [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:347]
+WARNING: [Synth 8-6901] identifier 'Segments_Digit0' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:223]
+WARNING: [Synth 8-6901] identifier 'Segments_Digit1' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:224]
+WARNING: [Synth 8-6901] identifier 'Segments_Digit2' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:225]
+WARNING: [Synth 8-6901] identifier 'Segments_Digit3' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:226]
+WARNING: [Synth 8-6901] identifier 'Segments_Digit4' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:229]
+WARNING: [Synth 8-6901] identifier 'Segments_Digit5' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:230]
+WARNING: [Synth 8-6901] identifier 'Segments_Digit6' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:231]
+WARNING: [Synth 8-6901] identifier 'Segments_Digit7' is used before its declaration [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:232]
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:315]
+WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode of verilog [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:345]
+WARNING: [Synth 8-2369] multiple packed dimensions are not allowed in this mode of verilog [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:370]
 WARNING: [Synth 8-2507] parameter declaration becomes local in wb_mux with formal parameter declaration list [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Interconnect/WishboneInterconnect/wb_intercon_1.2.2-r1/wb_mux.v:87]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1870.898 ; gain = 208.656 ; free physical = 2418 ; free virtual = 10648
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1870.902 ; gain = 208.656 ; free physical = 3716 ; free virtual = 7613
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'rvfpganexys' [/run/media/atharva/nux/ece540_rvfpga_sources/src/rvfpganexys.sv:25]
 	Parameter bootrom_file bound to: boot_main.mem - type: string 
@@ -899,50 +902,44 @@ INFO: [Synth 8-6155] done synthesizing module 'wb_mem_wrapper' (58#1) [/run/medi
 INFO: [Synth 8-6157] synthesizing module 'swervolf_syscon' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:26]
 	Parameter clk_freq_hz bound to: 50000000 - type: integer 
 INFO: [Synth 8-155] case statement is not full and has no default [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:165]
-INFO: [Synth 8-155] case statement is not full and has no default [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:232]
-INFO: [Synth 8-6157] synthesizing module 'SevSegDisplays_Controller' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:301]
-INFO: [Synth 8-6157] synthesizing module 'SevenSegDecoder' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:374]
-INFO: [Synth 8-226] default block is never used [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:377]
-INFO: [Synth 8-6155] done synthesizing module 'SevenSegDecoder' (59#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:374]
+INFO: [Synth 8-155] case statement is not full and has no default [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:236]
+INFO: [Synth 8-6157] synthesizing module 'SevSegDisplays_Controller' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:317]
 INFO: [Synth 8-6157] synthesizing module 'counter__parameterized0' [/run/media/atharva/nux/ece540_rvfpga_sources/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14]
 	Parameter WIDTH bound to: 32'b00000000000000000000000000010100 
 	Parameter STICKY_OVERFLOW bound to: 1'b0 
 INFO: [Synth 8-6157] synthesizing module 'delta_counter__parameterized1' [/run/media/atharva/nux/ece540_rvfpga_sources/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
 	Parameter WIDTH bound to: 32'b00000000000000000000000000010100 
 	Parameter STICKY_OVERFLOW bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'delta_counter__parameterized1' (59#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
-INFO: [Synth 8-6155] done synthesizing module 'counter__parameterized0' (59#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14]
-INFO: [Synth 8-6157] synthesizing module 'SevSegMux' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'delta_counter__parameterized1' (58#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/delta_counter.sv:13]
+INFO: [Synth 8-6155] done synthesizing module 'counter__parameterized0' (58#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/counter.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'SevSegMux' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:425]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter N_IN bound to: 8 - type: integer 
 	Parameter SEL_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'SevSegMux' (60#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:402]
-INFO: [Synth 8-6157] synthesizing module 'SevSegMux__parameterized0' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:402]
-	Parameter DATA_WIDTH bound to: 4 - type: integer 
-	Parameter N_IN bound to: 8 - type: integer 
-	Parameter SEL_WIDTH bound to: 3 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'SevSegMux__parameterized0' (60#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:402]
-INFO: [Synth 8-6155] done synthesizing module 'SevSegDisplays_Controller' (61#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:301]
-INFO: [Synth 8-6155] done synthesizing module 'swervolf_syscon' (62#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'SevSegMux' (59#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:425]
+INFO: [Synth 8-6155] done synthesizing module 'SevSegDisplays_Controller' (60#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:317]
+INFO: [Synth 8-6155] done synthesizing module 'swervolf_syscon' (61#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.v:26]
 INFO: [Synth 8-6157] synthesizing module 'simple_spi' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:69]
 	Parameter SS_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:147]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:147]
 INFO: [Synth 8-6157] synthesizing module 'fifo4' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/fifo4.v:54]
 	Parameter dw bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'fifo4' (63#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/fifo4.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'fifo4' (62#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/fifo4.v:54]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:244]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:244]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma parallel_case detected. Simulation mismatch may occur [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:279]
 INFO: [Synth 8-3536] HDL ADVISOR - Pragma full_case detected. Simulation mismatch may occur [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:279]
-INFO: [Synth 8-6155] done synthesizing module 'simple_spi' (64#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'simple_spi' (63#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/spi/simple_spi_top.v:69]
 INFO: [Synth 8-6157] synthesizing module 'uart_top' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_top.v:137]
 	Parameter SIM bound to: 0 - type: integer 
 	Parameter debug bound to: 0 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'uart_wb' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_wb.v:139]
-INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (65#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_wb.v:139]
+INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (64#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_wb.v:139]
+INFO: [Synth 8-6157] synthesizing module 'uart_regs' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_regs.v:227]
 	Parameter SIM bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_transmitter.v:150]
+INFO: [Common 17-14] Message 'Synth 8-6157' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter SIM bound to: 0 - type: integer 
 	Parameter s_idle bound to: 3'b000 
 	Parameter s_send_start bound to: 3'b001 
@@ -957,12 +954,12 @@ INFO: [Synth 8-6155] done synthesizing module 'uart_wb' (65#1) [/run/media/athar
 	Parameter addr_width bound to: 4 - type: integer 
 	Parameter data_width bound to: 8 - type: integer 
 	Parameter depth bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'raminfr' (66#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/raminfr.v:83]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (67#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_tfifo.v:140]
-INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (68#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_transmitter.v:150]
-INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'raminfr' (65#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/raminfr.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (66#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_tfifo.v:140]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (67#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_transmitter.v:150]
 	Parameter width bound to: 1 - type: integer 
 	Parameter init_value bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'uart_sync_flops' (68#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_sync_flops.v:67]
 	Parameter sr_idle bound to: 4'b0000 
 	Parameter sr_rec_start bound to: 4'b0001 
 	Parameter sr_rec_bit bound to: 4'b0010 
@@ -978,6 +975,8 @@ INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instan
 	Parameter fifo_depth bound to: 16 - type: integer 
 	Parameter fifo_pointer_w bound to: 4 - type: integer 
 	Parameter fifo_counter_w bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rfifo' (69#1) [/run/media/atharva/nux/ece540_rvfpga_sources/src/SweRVolfSoC/Peripherals/uart/uart_rfifo.v:146]
+INFO: [Common 17-14] Message 'Synth 8-6155' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 	Parameter dw bound to: 32 - type: integer 
 	Parameter aw bound to: 8 - type: integer 
 	Parameter gw bound to: 32 - type: integer 
@@ -1856,7 +1855,7 @@ WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arlen[0]
 WARNING: [Synth 8-3331] design dma_ctrl has unconnected port dma_axi_arburst[1]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2277.531 ; gain = 615.289 ; free physical = 2081 ; free virtual = 10324
+Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2277.535 ; gain = 615.289 ; free physical = 3135 ; free virtual = 7234
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1869,12 +1868,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2292.375 ; gain = 630.133 ; free physical = 2132 ; free virtual = 10371
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2289.410 ; gain = 627.164 ; free physical = 3179 ; free virtual = 7298
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2292.375 ; gain = 630.133 ; free physical = 2132 ; free virtual = 10371
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2289.410 ; gain = 627.164 ; free physical = 3179 ; free virtual = 7298
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.89 ; elapsed = 00:00:00.89 . Memory (MB): peak = 2292.375 ; gain = 0.000 ; free physical = 2021 ; free virtual = 10251
+Netlist sorting complete. Time (s): cpu = 00:00:00.94 ; elapsed = 00:00:00.97 . Memory (MB): peak = 2289.410 ; gain = 0.000 ; free physical = 3072 ; free virtual = 7199
 INFO: [Netlist 29-17] Analyzing 62 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1892,7 +1891,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/rvfpganexys_
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2532.766 ; gain = 0.000 ; free physical = 1783 ; free virtual = 10005
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2531.707 ; gain = 0.000 ; free physical = 3130 ; free virtual = 7098
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 28 instances were transformed.
   FD => FDRE: 8 instances
@@ -1901,9 +1900,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   PLLE2_BASE => PLLE2_ADV: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.22 . Memory (MB): peak = 2532.766 ; gain = 0.000 ; free physical = 1789 ; free virtual = 10010
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.20 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2531.707 ; gain = 0.000 ; free physical = 3130 ; free virtual = 7096
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2532.766 ; gain = 870.523 ; free physical = 2057 ; free virtual = 10304
+Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 2531.707 ; gain = 869.461 ; free physical = 3505 ; free virtual = 7400
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5580] Multithreading enabled for synth_design using a maximum of 4 processes.
 ---------------------------------------------------------------------------------
@@ -1911,13 +1910,13 @@ Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2536.684 ; gain = 874.441 ; free physical = 2057 ; free virtual = 10304
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:52 . Memory (MB): peak = 2535.625 ; gain = 873.379 ; free physical = 3505 ; free virtual = 7399
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2536.684 ; gain = 874.441 ; free physical = 2057 ; free virtual = 10304
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 2535.625 ; gain = 873.379 ; free physical = 3502 ; free virtual = 7397
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/run/media/atharva/nux/ece540_rvfpga_sources/src/LiteDRAM/litedram_core.v:5869]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/run/media/atharva/nux/ece540_rvfpga_sources/src/LiteDRAM/litedram_core.v:7729]
@@ -2041,7 +2040,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'tstate_reg' using encoding
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'sequential' in module 'uart_receiver'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:14 ; elapsed = 00:01:26 . Memory (MB): peak = 2536.684 ; gain = 874.441 ; free physical = 213 ; free virtual = 7361
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:18 ; elapsed = 00:01:35 . Memory (MB): peak = 2535.625 ; gain = 873.379 ; free physical = 216 ; free virtual = 3989
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'swervolf/swerv_eh1/swerv/dbg/axi_bready_ff' (rvdffs) to 'swervolf/swerv_eh1/swerv/dbg/axi_rready_ff'
 INFO: [Synth 8-223] decloning instance 'swervolf/swerv_eh1/swerv/exu/div_e1/dividend_c' (rvtwoscomp) to 'swervolf/swerv_eh1/swerv/exu/div_e1/q_ff_c'
@@ -2061,7 +2060,7 @@ Report RTL Partitions:
 |7     |swerv__GCB0         |           1|     42963|
 |8     |exu                 |           1|     22012|
 |9     |mem                 |           1|      4137|
-|10    |swervolf_core__GCB0 |           1|     28953|
+|10    |swervolf_core__GCB0 |           1|     29020|
 |11    |swervolf_core__GCB1 |           1|     22206|
 |12    |rvfpganexys__GC0    |           1|      2979|
 +------+--------------------+------------+----------+
@@ -2138,7 +2137,7 @@ Detailed RTL Component Info :
 	               37 Bit    Registers := 5     
 	               34 Bit    Registers := 18    
 	               33 Bit    Registers := 6     
-	               32 Bit    Registers := 240   
+	               32 Bit    Registers := 239   
 	               31 Bit    Registers := 34    
 	               28 Bit    Registers := 1     
 	               27 Bit    Registers := 2     
@@ -2156,7 +2155,7 @@ Detailed RTL Component Info :
 	               11 Bit    Registers := 6     
 	               10 Bit    Registers := 20    
 	                9 Bit    Registers := 13    
-	                8 Bit    Registers := 84    
+	                8 Bit    Registers := 91    
 	                7 Bit    Registers := 3     
 	                6 Bit    Registers := 36    
 	                5 Bit    Registers := 143   
@@ -2197,11 +2196,11 @@ Detailed RTL Component Info :
 	   2 Input     37 Bit        Muxes := 5     
 	   2 Input     34 Bit        Muxes := 5     
 	   2 Input     33 Bit        Muxes := 7     
-	   2 Input     32 Bit        Muxes := 362   
+	   2 Input     32 Bit        Muxes := 361   
 	   5 Input     32 Bit        Muxes := 1     
 	   6 Input     32 Bit        Muxes := 8     
 	   4 Input     32 Bit        Muxes := 3     
-	  10 Input     32 Bit        Muxes := 4     
+	  10 Input     32 Bit        Muxes := 3     
 	   2 Input     31 Bit        Muxes := 57    
 	   2 Input     30 Bit        Muxes := 1     
 	   2 Input     28 Bit        Muxes := 2     
@@ -2227,10 +2226,10 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit        Muxes := 5     
 	   8 Input     10 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 20    
-	   2 Input      8 Bit        Muxes := 183   
+	   2 Input      8 Bit        Muxes := 190   
 	   4 Input      8 Bit        Muxes := 6     
 	   3 Input      8 Bit        Muxes := 8     
-	  10 Input      8 Bit        Muxes := 1     
+	  10 Input      8 Bit        Muxes := 8     
 	  11 Input      8 Bit        Muxes := 2     
 	   9 Input      8 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 7     
@@ -13885,16 +13884,16 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit         XORs := 2     
 +---Registers : 
 	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 4     
-	                8 Bit    Registers := 1     
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 8     
 	                1 Bit    Registers := 15    
 +---Muxes : 
 	   2 Input     64 Bit        Muxes := 1     
 	  10 Input     64 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 4     
-	  10 Input     32 Bit        Muxes := 4     
-	   2 Input      8 Bit        Muxes := 9     
-	  10 Input      8 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	  10 Input     32 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 16    
+	  10 Input      8 Bit        Muxes := 8     
 	  10 Input      1 Bit        Muxes := 9     
 	   2 Input      1 Bit        Muxes := 26    
 	  14 Input      1 Bit        Muxes := 1     
@@ -16384,7 +16383,7 @@ INFO: [Synth 8-3886] merging instance 'axi_intercon/axi_xbar/gen_slv_port_demux[
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:51 ; elapsed = 00:03:30 . Memory (MB): peak = 2536.688 ; gain = 874.445 ; free physical = 661 ; free virtual = 6911
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:54 ; elapsed = 00:03:39 . Memory (MB): peak = 2535.629 ; gain = 873.383 ; free physical = 615 ; free virtual = 3467
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16503,7 +16502,7 @@ Report RTL Partitions:
 |7     |swerv__GCB0         |           1|     36202|
 |8     |exu                 |           1|     18124|
 |9     |mem                 |           1|      3742|
-|10    |swervolf_core__GCB0 |           1|      6329|
+|10    |swervolf_core__GCB0 |           1|      6343|
 |11    |swervolf_core__GCB1 |           1|      9601|
 |12    |rvfpganexys__GC0    |           1|      2958|
 +------+--------------------+------------+----------+
@@ -16513,13 +16512,13 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-3321] set_false_path : Empty from list for constraint at line 8 of /run/media/atharva/nux/ece540_rvfpga_sources/src/rvfpganexys.xdc. [/run/media/atharva/nux/ece540_rvfpga_sources/src/rvfpganexys.xdc:8]
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 206 of /run/media/atharva/nux/ece540_rvfpga_sources/src/LiteDRAM/liteDRAM.xdc. [/run/media/atharva/nux/ece540_rvfpga_sources/src/LiteDRAM/liteDRAM.xdc:206]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:01 ; elapsed = 00:03:42 . Memory (MB): peak = 2536.688 ; gain = 874.445 ; free physical = 391 ; free virtual = 6733
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:03:05 ; elapsed = 00:03:51 . Memory (MB): peak = 2535.629 ; gain = 873.383 ; free physical = 389 ; free virtual = 3278
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:04:30 ; elapsed = 00:05:15 . Memory (MB): peak = 2536.688 ; gain = 874.445 ; free physical = 229 ; free virtual = 6169
+Finished Timing Optimization : Time (s): cpu = 00:04:30 ; elapsed = 00:05:19 . Memory (MB): peak = 2535.629 ; gain = 873.383 ; free physical = 263 ; free virtual = 3282
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16611,7 +16610,7 @@ Report RTL Partitions:
 |3     |dec__GB1            |           1|     19562|
 |4     |exu                 |           1|     17847|
 |5     |mem                 |           1|      3742|
-|6     |swervolf_core__GCB0 |           1|      6329|
+|6     |swervolf_core__GCB0 |           1|      6343|
 |7     |swervolf_core__GCB1 |           1|      7960|
 |8     |rvfpganexys__GC0    |           1|      2758|
 |9     |rvfpganexys_GT0     |           1|     31744|
@@ -16718,7 +16717,7 @@ WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at li
 WARNING: [Synth 8-3321] set_false_path : Empty from list for constraint at line 8 of /run/media/atharva/nux/ece540_rvfpga_sources/src/rvfpganexys.xdc. [/run/media/atharva/nux/ece540_rvfpga_sources/src/rvfpganexys.xdc:8]
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 206 of /run/media/atharva/nux/ece540_rvfpga_sources/src/LiteDRAM/liteDRAM.xdc. [/run/media/atharva/nux/ece540_rvfpga_sources/src/LiteDRAM/liteDRAM.xdc:206]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:04:45 ; elapsed = 00:05:44 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 461 ; free virtual = 5640
+Finished Technology Mapping : Time (s): cpu = 00:04:45 ; elapsed = 00:05:46 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 447 ; free virtual = 2704
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -16730,7 +16729,7 @@ Report RTL Partitions:
 |3     |dec__GB1            |           1|      4809|
 |4     |exu                 |           1|      6406|
 |5     |mem                 |           1|      1103|
-|6     |swervolf_core__GCB0 |           1|      3386|
+|6     |swervolf_core__GCB0 |           1|      3415|
 |7     |swervolf_core__GCB1 |           1|      4050|
 |8     |rvfpganexys__GC0    |           1|      1661|
 |9     |rvfpganexys_GT0     |           1|     10494|
@@ -16782,13 +16781,13 @@ INFO: [Common 17-14] Message 'Synth 8-7053' appears 100 times and further instan
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:04:57 ; elapsed = 00:05:56 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 588 ; free virtual = 5828
+Finished IO Insertion : Time (s): cpu = 00:04:56 ; elapsed = 00:05:58 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 364 ; free virtual = 2695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:04:57 ; elapsed = 00:05:56 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 588 ; free virtual = 5828
+Finished Renaming Generated Instances : Time (s): cpu = 00:04:57 ; elapsed = 00:05:58 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 364 ; free virtual = 2692
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -16807,25 +16806,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:08 ; elapsed = 00:06:07 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 593 ; free virtual = 5828
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:07 ; elapsed = 00:06:09 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 343 ; free virtual = 2691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:09 ; elapsed = 00:06:08 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 588 ; free virtual = 5829
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:09 ; elapsed = 00:06:10 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 341 ; free virtual = 2685
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:10 ; elapsed = 00:06:10 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 533 ; free virtual = 5810
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:10 ; elapsed = 00:06:12 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 333 ; free virtual = 2690
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:11 ; elapsed = 00:06:10 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 554 ; free virtual = 5818
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:10 ; elapsed = 00:06:12 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 333 ; free virtual = 2689
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -16865,12 +16864,12 @@ Report Cell Usage:
 |6     |IDELAYE2    |    16|
 |7     |ISERDESE2   |    16|
 |8     |LUT1        |   501|
-|9     |LUT2        |  2271|
-|10    |LUT3        |  4869|
-|11    |LUT4        |  5811|
-|12    |LUT5        |  7675|
-|13    |LUT6        | 18225|
-|14    |MUXF7       |   510|
+|9     |LUT2        |  2273|
+|10    |LUT3        |  4875|
+|11    |LUT4        |  5791|
+|12    |LUT5        |  7682|
+|13    |LUT6        | 18231|
+|14    |MUXF7       |   514|
 |15    |MUXF8       |    32|
 |16    |OSERDESE2   |    44|
 |17    |PLLE2_ADV   |     1|
@@ -16897,12 +16896,12 @@ Report Cell Usage:
 |38    |FD          |     8|
 |39    |FDCE        | 16084|
 |40    |FDPE        |    54|
-|41    |FDRE        |  3064|
+|41    |FDRE        |  3088|
 |42    |FDSE        |   215|
 |43    |IBUF        |     5|
 |44    |IOBUF       |    37|
 |45    |IOBUFDS     |     2|
-|46    |OBUF        |    61|
+|46    |OBUF        |    62|
 |47    |OBUFDS      |     1|
 +------+------------+------+
 
@@ -16910,7 +16909,7 @@ Report Instance Areas:
 +------+----------------------------------------------------------------------+------------------------------------+------+
 |      |Instance                                                              |Module                              |Cells |
 +------+----------------------------------------------------------------------+------------------------------------+------+
-|1     |top                                                                   |                                    | 60503|
+|1     |top                                                                   |                                    | 60533|
 |2     |  cdc                                                                 |axi_cdc_intf                        |  1691|
 |3     |    i_axi_cdc                                                         |axi_cdc                             |  1691|
 |4     |      i_cdc_fifo_gray_ar                                              |cdc_fifo_gray__parameterized1       |   240|
@@ -16968,8 +16967,8 @@ Report Instance Areas:
 |56    |          state                                                       |serv_state                          |    50|
 |57    |        rf_ram                                                        |serv_rf_ram                         |     1|
 |58    |        rf_ram_if                                                     |serv_rf_ram_if                      |    46|
-|59    |  swervolf                                                            |swervolf_core                       | 52822|
-|60    |    axi2wb                                                            |axi2wb                              |   817|
+|59    |  swervolf                                                            |swervolf_core                       | 52851|
+|60    |    axi2wb                                                            |axi2wb                              |   813|
 |61    |    axi_intercon                                                      |axi_intercon                        |  3102|
 |62    |      axi_xbar                                                        |axi_xbar                            |  3046|
 |63    |        \gen_mst_port_mux[0].i_axi_mux                                |axi_mux                             |   321|
@@ -20489,10 +20488,10 @@ Report Instance Areas:
 |3577  |            sync_ff1                                                  |rvdff__parameterized13_37           |     4|
 |3578  |            sync_ff2                                                  |rvdff__parameterized13_38           |     4|
 |3579  |          wake_up_ff                                                  |rvdff_36                            |     1|
-|3580  |    syscon                                                            |swervolf_syscon                     |   513|
-|3581  |      SegDispl_Ctr                                                    |SevSegDisplays_Controller           |    53|
-|3582  |        counter20                                                     |counter__parameterized0             |    53|
-|3583  |          i_counter                                                   |delta_counter__parameterized1       |    53|
+|3580  |    syscon                                                            |swervolf_syscon                     |   546|
+|3581  |      SegDispl_Ctr                                                    |SevSegDisplays_Controller           |    58|
+|3582  |        counter20                                                     |counter__parameterized0             |    58|
+|3583  |          i_counter                                                   |delta_counter__parameterized1       |    58|
 |3584  |    timer_ptc                                                         |ptc_top                             |   214|
 |3585  |    uart16550_0                                                       |uart_top                            |   728|
 |3586  |      regs                                                            |uart_regs                           |   674|
@@ -20509,18 +20508,18 @@ Report Instance Areas:
 |3597  |  tap                                                                 |bscan_tap                           |   314|
 +------+----------------------------------------------------------------------+------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:11 ; elapsed = 00:06:10 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 558 ; free virtual = 5823
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:11 ; elapsed = 00:06:12 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 332 ; free virtual = 2690
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 436 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:56 ; elapsed = 00:05:57 . Memory (MB): peak = 2544.691 ; gain = 642.059 ; free physical = 4773 ; free virtual = 10033
-Synthesis Optimization Complete : Time (s): cpu = 00:05:14 ; elapsed = 00:06:13 . Memory (MB): peak = 2544.691 ; gain = 882.449 ; free physical = 4773 ; free virtual = 10028
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:56 ; elapsed = 00:05:56 . Memory (MB): peak = 2543.633 ; gain = 639.090 ; free physical = 4344 ; free virtual = 6802
+Synthesis Optimization Complete : Time (s): cpu = 00:05:14 ; elapsed = 00:06:13 . Memory (MB): peak = 2543.633 ; gain = 881.387 ; free physical = 4347 ; free virtual = 6794
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2544.691 ; gain = 0.000 ; free physical = 4701 ; free virtual = 9973
-INFO: [Netlist 29-17] Analyzing 1606 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2543.633 ; gain = 0.000 ; free physical = 4252 ; free virtual = 6739
+INFO: [Netlist 29-17] Analyzing 1610 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 3 inverter(s) to 34 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2556.777 ; gain = 0.000 ; free physical = 4600 ; free virtual = 9872
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2555.719 ; gain = 0.000 ; free physical = 4186 ; free virtual = 6674
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 122 instances were transformed.
   FD => FDRE: 8 instances
@@ -20531,13 +20530,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 73 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-695 Infos, 383 Warnings, 0 Critical Warnings and 0 Errors encountered.
+694 Infos, 386 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:31 ; elapsed = 00:06:42 . Memory (MB): peak = 2556.777 ; gain = 1123.699 ; free physical = 4817 ; free virtual = 10089
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2556.777 ; gain = 0.000 ; free physical = 4811 ; free virtual = 10083
+synth_design: Time (s): cpu = 00:05:32 ; elapsed = 00:06:43 . Memory (MB): peak = 2555.719 ; gain = 1122.637 ; free physical = 4406 ; free virtual = 6892
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2555.719 ; gain = 0.000 ; free physical = 4406 ; free virtual = 6892
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Lab6/project_2_lab6/project_2_lab6.runs/synth_1/rvfpganexys.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2580.789 ; gain = 24.012 ; free physical = 4777 ; free virtual = 10068
+write_checkpoint: Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2579.730 ; gain = 24.012 ; free physical = 4383 ; free virtual = 6904
 INFO: [runtcl-4] Executing : report_utilization -file rvfpganexys_utilization_synth.rpt -pb rvfpganexys_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 21 12:39:14 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 28 15:26:09 2022...

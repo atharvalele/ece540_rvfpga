@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1642797127">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1643411940">
   <File Type="VDS-TIMING-PB" Name="rvfpganexys_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="rvfpganexys_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="rvfpganexys.dcp"/>
@@ -1431,14 +1431,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/stream_intf.sv">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../../../src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/stream_join.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -1496,6 +1488,14 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../../src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/unread.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../src/OtherSources/pulp-platform.org__common_cells_1.20.0/src/stream_intf.sv">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -1575,9 +1575,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

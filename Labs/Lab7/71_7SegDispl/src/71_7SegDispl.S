@@ -9,7 +9,7 @@ main:
     sb t6, 0(t1)						# Enable the 7SegDisplays
 
     li t1, SegDig_ADDR
-    li t6, 0x71
+    li t6, 0x1024
     sw t6, 0(t1)						# Write the 7SegDisplays
 
 next:	beq zero, zero, next
