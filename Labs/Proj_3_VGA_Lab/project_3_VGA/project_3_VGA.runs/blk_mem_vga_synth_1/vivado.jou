@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Thu Feb 10 13:26:16 2022
+# Process ID: 44982
+# Current directory: /run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_3_VGA_Lab/project_3_VGA/project_3_VGA.runs/blk_mem_vga_synth_1
+# Command line: vivado -log blk_mem_vga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source blk_mem_vga.tcl
+# Log file: /run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_3_VGA_Lab/project_3_VGA/project_3_VGA.runs/blk_mem_vga_synth_1/blk_mem_vga.vds
+# Journal file: /run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_3_VGA_Lab/project_3_VGA/project_3_VGA.runs/blk_mem_vga_synth_1/vivado.jou
+#-----------------------------------------------------------
+source blk_mem_vga.tcl -notrace

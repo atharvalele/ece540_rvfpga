@@ -84,7 +84,12 @@ module swervolf_core
     output wire        o_accel_sclk,
     output wire        o_accel_cs_n,
     output wire        o_accel_mosi,
-    input wire         i_accel_miso);
+    input wire         i_accel_miso,
+    input wire         VGA_clk,
+    output wire [3:0]  VGA_R,
+    output wire [3:0]  VGA_G,
+    output wire [3:0]  VGA_B,
+    output wire        VGA_HS, VGA_VS);
 
    localparam BOOTROM_SIZE = 32'h1000;
 
@@ -661,6 +666,17 @@ module swervolf_core
 
       .scan_mode  (1'b0),
       .mbist_mode (1'b0));
+
+  // VGA Controller Instance
+  vga_controller vga(
+    .clock(VGA_clk),
+    .reset(rstn),
+    .VGA_R(VGA_R),
+    .VGA_G(VGA_G),
+    .VGA_B(VGA_B),
+    .VGA_HS(VGA_HS),
+    .VGA_VS(VGA_VS)
+  );
 
 endmodule
 
