@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Feb 11 10:30:01 2022
+# Make data base, printed on Sat Feb 12 10:30:44 2022
 
 # Variables
 
@@ -21,9 +21,9 @@ NO_AT_BRIDGE = 1
 # environment
 GTK_RC_FILES = /etc/gtk/gtkrc:/home/atharva/.gtkrc:/home/atharva/.config/gtkrc
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-275e51c6-90ba-491f-bfc4-6b9d28a6b78f.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d2c6368a-8bbd-4078-8be9-088fc5ce3771.sock
 # environment
-KONSOLE_DBUS_SERVICE = :1.2413
+KONSOLE_DBUS_SERVICE = :1.43
 # environment
 LC_NAME = en_US.UTF-8
 # environment
@@ -31,7 +31,7 @@ LC_NUMERIC = en_US.UTF-8
 # environment
 VSCODE_CWD = /run/media/atharva/nux/ece540_rvfpga_sources
 # environment
-WINDOWID = 0
+WINDOWID = 60817415
 # environment
 LC_ADDRESS = en_US.UTF-8
 # default
@@ -51,7 +51,7 @@ PWD = /run/media/atharva/nux/ece540_rvfpga_sources
 # environment
 MAIL = /var/spool/mail/atharva
 # environment
-OLDPWD = /run/media/atharva/nux/ece540_rvfpga_sources
+KONSOLE_DBUS_WINDOW = /Windows/1
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # environment
@@ -105,13 +105,13 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 115698
+VSCODE_PID = 1769
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/drogon:@/tmp/.ICE-unix/659,unix/drogon:/tmp/.ICE-unix/659
+SESSION_MANAGER = local/drogon:@/tmp/.ICE-unix/678,unix/drogon:/tmp/.ICE-unix/678
 # automatic
 *F = $(notdir $*)
 # environment
@@ -193,7 +193,7 @@ XDG_VTNR = 1
 # makefile
 .DEFAULT_GOAL := 
 # environment
-SYSTEMD_EXEC_PID = 565
+SYSTEMD_EXEC_PID = 584
 # environment
 EDITOR = nano
 # environment
@@ -251,7 +251,7 @@ VSCODE_CLI = 1
 # environment
 ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
-SHELL_SESSION_ID = ce0815c43b6045f7a15bdae20bd08482
+SHELL_SESSION_ID = 2e7ff163629643e8a8e8b3f8124557f2
 # environment
 KDE_SESSION_VERSION = 5
 # default
@@ -327,6 +327,6 @@ GNUmakefile:
 # strcache performance: lookups = 22 / hit rate = 13%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/22=0%
-# Finished Make data base on Fri Feb 11 10:30:01 2022
+# Finished Make data base on Sat Feb 12 10:30:44 2022
 
  
