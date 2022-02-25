@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/atharva/xilinx_vivado/Vivado/2019.2/ids_lite/ISE/bin/lin64:/home/atharva/xilinx_vivado/Vivado/2019.2/bin
+  PATH=/home/atharva/software_installs/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/lin64:/home/atharva/software_installs/Xilinx/Vivado/2019.2/bin
 else
-  PATH=/home/atharva/xilinx_vivado/Vivado/2019.2/ids_lite/ISE/bin/lin64:/home/atharva/xilinx_vivado/Vivado/2019.2/bin:$PATH
+  PATH=/home/atharva/software_installs/Xilinx/Vivado/2019.2/ids_lite/ISE/bin/lin64:/home/atharva/software_installs/Xilinx/Vivado/2019.2/bin:$PATH
 fi
 export PATH
 
@@ -37,7 +37,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log rvfpganexys.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source rvfpganexys.tcl -notrace
 
 

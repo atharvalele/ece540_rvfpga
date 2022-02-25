@@ -1,80 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1644709529">
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="BITSTR-SYSDEF" Name="rvfpganexys.sysdef"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="rvfpganexys.ltx"/>
-  <File Type="BG-BGN" Name="rvfpganexys.bgn"/>
-  <File Type="RBD_FILE" Name="rvfpganexys.rbd"/>
-  <File Type="BG-DRC" Name="rvfpganexys.drc"/>
-  <File Type="NPI_FILE" Name="rvfpganexys.npi"/>
-  <File Type="RNPI_FILE" Name="rvfpganexys.rnpi"/>
-  <File Type="CFI_FILE" Name="rvfpganexys.cfi"/>
-  <File Type="PDI-FILE" Name="rvfpganexys.pdi"/>
-  <File Type="BITSTR-MMI" Name="rvfpganexys.mmi"/>
-  <File Type="BITSTR-BMM" Name="rvfpganexys_bd.bmm"/>
-  <File Type="BITSTR-NKY" Name="rvfpganexys.nky"/>
-  <File Type="BITSTR-RBT" Name="rvfpganexys.rbt"/>
-  <File Type="BITSTR-MSK" Name="rvfpganexys.msk"/>
+  <File Type="PA-TCL" Name="rvfpganexys.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="rvfpganexys_bus_skew_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="rvfpganexys_reports.tcl"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="rvfpganexys_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="rvfpganexys_opt.dcp"/>
+  <File Type="OPT-DRC" Name="rvfpganexys_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="rvfpganexys.hwdef"/>
+  <File Type="PWROPT-DCP" Name="rvfpganexys_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="rvfpganexys_placed.dcp"/>
+  <File Type="PLACE-IO" Name="rvfpganexys_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="rvfpganexys_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="rvfpganexys_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="rvfpganexys_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="rvfpganexys_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="rvfpganexys_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="rvfpganexys_physopt.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="rvfpganexys_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="rvfpganexys_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="rvfpganexys_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="rvfpganexys_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="rvfpganexys_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="rvfpganexys_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="rvfpganexys_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="rvfpganexys_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="rvfpganexys_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="rvfpganexys_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="rvfpganexys_power_summary_routed.pb"/>
   <File Type="BG-BIN" Name="rvfpganexys.bin"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="rvfpganexys_timing_summary_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="rvfpganexys.msk"/>
+  <File Type="CFI_FILE" Name="rvfpganexys.cfi"/>
+  <File Type="ROUTE-TIMING-PB" Name="rvfpganexys_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="rvfpganexys.rbt"/>
+  <File Type="RNPI_FILE" Name="rvfpganexys.rnpi"/>
+  <File Type="ROUTE-TIMING-RPX" Name="rvfpganexys_timing_summary_routed.rpx"/>
+  <File Type="BITSTR-NKY" Name="rvfpganexys.nky"/>
+  <File Type="BITSTR-BMM" Name="rvfpganexys_bd.bmm"/>
+  <File Type="ROUTE-CLK" Name="rvfpganexys_clock_utilization_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="rvfpganexys.mmi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="rvfpganexys_bus_skew_routed.rpt"/>
+  <File Type="PDI-FILE" Name="rvfpganexys.pdi"/>
+  <File Type="RBD_FILE" Name="rvfpganexys.rbd"/>
+  <File Type="BG-BGN" Name="rvfpganexys.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="rvfpganexys.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BITSTR-LTX" Name="rvfpganexys.ltx"/>
+  <File Type="NPI_FILE" Name="rvfpganexys.npi"/>
+  <File Type="BG-DRC" Name="rvfpganexys.drc"/>
   <File Type="RCFI_FILE" Name="rvfpganexys.rcfi"/>
   <File Type="BG-BIT" Name="rvfpganexys.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="rvfpganexys_bus_skew_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="rvfpganexys_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="rvfpganexys_bus_skew_postroute_physopted.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="rvfpganexys_route_status.pb"/>
   <File Type="RDI-RDI" Name="rvfpganexys.vdi"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="rvfpganexys_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="rvfpganexys_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="rvfpganexys_timing_summary_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="rvfpganexys_postroute_physopt_bb.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="rvfpganexys_postroute_physopt.dcp"/>
-  <File Type="ROUTE-BUS-SKEW" Name="rvfpganexys_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="rvfpganexys_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-SIMILARITY" Name="rvfpganexys_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-TIMING-RPX" Name="rvfpganexys_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-TIMING-PB" Name="rvfpganexys_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="rvfpganexys_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="rvfpganexys_route_status.pb"/>
   <File Type="ROUTE-STATUS" Name="rvfpganexys_route_status.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="rvfpganexys_power_routed.rpx"/>
-  <File Type="ROUTE-PWR-SUM" Name="rvfpganexys_power_summary_routed.pb"/>
-  <File Type="ROUTE-PWR" Name="rvfpganexys_power_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="rvfpganexys_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="rvfpganexys_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="rvfpganexys_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-RPX" Name="rvfpganexys_drc_routed.rpx"/>
-  <File Type="ROUTE-DRC-PB" Name="rvfpganexys_drc_routed.pb"/>
-  <File Type="ROUTE-DRC" Name="rvfpganexys_drc_routed.rpt"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="rvfpganexys_routed_bb.dcp"/>
-  <File Type="ROUTE-DCP" Name="rvfpganexys_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="rvfpganexys_routed_error.dcp"/>
-  <File Type="PHYSOPT-TIMING" Name="rvfpganexys_timing_summary_physopted.rpt"/>
-  <File Type="PHYSOPT-DRC" Name="rvfpganexys_drc_physopted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="rvfpganexys_physopt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="rvfpganexys_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="rvfpganexys_postplace_pwropt.dcp"/>
-  <File Type="PLACE-TIMING" Name="rvfpganexys_timing_summary_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="rvfpganexys_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="rvfpganexys_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-CTRL" Name="rvfpganexys_control_sets_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="rvfpganexys_utilization_placed.pb"/>
-  <File Type="PLACE-UTIL" Name="rvfpganexys_utilization_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="rvfpganexys_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-IO" Name="rvfpganexys_io_placed.rpt"/>
-  <File Type="PLACE-DCP" Name="rvfpganexys_placed.dcp"/>
-  <File Type="PWROPT-TIMING" Name="rvfpganexys_timing_summary_pwropted.rpt"/>
-  <File Type="PWROPT-DRC" Name="rvfpganexys_drc_pwropted.rpt"/>
-  <File Type="PWROPT-DCP" Name="rvfpganexys_pwropt.dcp"/>
-  <File Type="OPT-TIMING" Name="rvfpganexys_timing_summary_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="rvfpganexys.hwdef"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="rvfpganexys_methodology_drc_opted.rpt"/>
-  <File Type="OPT-DRC" Name="rvfpganexys_drc_opted.rpt"/>
-  <File Type="OPT-DCP" Name="rvfpganexys_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="rvfpganexys_timing_summary_init.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="rvfpganexys_bus_skew_routed.rpx"/>
-  <File Type="REPORTS-TCL" Name="rvfpganexys_reports.tcl"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="rvfpganexys_bus_skew_routed.pb"/>
-  <File Type="PA-TCL" Name="rvfpganexys.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../../../src/SweRVolfSoC/SweRVEh1CoreComplex/include/common_defines.vh">
@@ -1672,6 +1653,6 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="blk_mem_vga"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_vga"/>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_vga"/>
 </GenRun>

@@ -1,0 +1,1205 @@
+
+*** Running vivado
+    with args -log rvfpganexys.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source rvfpganexys.tcl -notrace
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source rvfpganexys.tcl -notrace
+Command: link_design -top rvfpganexys -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-454] Reading design checkpoint '/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.srcs/sources_1/ip/clk_vga/clk_vga.dcp' for cell 'vga_clock_inst'
+INFO: [Project 1-454] Reading design checkpoint '/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.srcs/sources_1/ip/blk_mem_vga/blk_mem_vga.dcp' for cell 'swervolf/vga/vga_image_mem'
+Netlist sorting complete. Time (s): cpu = 00:00:00.91 ; elapsed = 00:00:00.92 . Memory (MB): peak = 1805.984 ; gain = 0.000 ; free physical = 5023 ; free virtual = 7624
+INFO: [Netlist 29-17] Analyzing 1684 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, vga_clock_inst/inst/clkin1_ibufg, from the path connected to top-level port: clk 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'vga_clock_inst/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc] for cell 'vga_clock_inst/inst'
+Finished Parsing XDC File [/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.srcs/sources_1/ip/clk_vga/clk_vga_board.xdc] for cell 'vga_clock_inst/inst'
+Parsing XDC File [/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.srcs/sources_1/ip/clk_vga/clk_vga.xdc] for cell 'vga_clock_inst/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.srcs/sources_1/ip/clk_vga/clk_vga.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.srcs/sources_1/ip/clk_vga/clk_vga.xdc:57]
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2552.988 ; gain = 558.773 ; free physical = 4429 ; free virtual = 7024
+Finished Parsing XDC File [/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.srcs/sources_1/ip/clk_vga/clk_vga.xdc] for cell 'vga_clock_inst/inst'
+Parsing XDC File [/run/media/atharva/nux/ece540_rvfpga_sources/src/rvfpganexys.xdc]
+Finished Parsing XDC File [/run/media/atharva/nux/ece540_rvfpga_sources/src/rvfpganexys.xdc]
+Parsing XDC File [/run/media/atharva/nux/ece540_rvfpga_sources/src/LiteDRAM/liteDRAM.xdc]
+Finished Parsing XDC File [/run/media/atharva/nux/ece540_rvfpga_sources/src/LiteDRAM/liteDRAM.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2552.988 ; gain = 0.000 ; free physical = 4451 ; free virtual = 7090
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 113 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 37 instances
+  IOBUFDS => IOBUFDS (IBUFDS, INV, OBUFTDS(x2)): 2 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 73 instances
+
+11 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:47 . Memory (MB): peak = 2552.988 ; gain = 1118.215 ; free physical = 4451 ; free virtual = 7090
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2585.004 ; gain = 32.016 ; free physical = 4439 ; free virtual = 7080
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 1021be56b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2587.973 ; gain = 2.969 ; free physical = 4401 ; free virtual = 7042
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 21 inverter(s) to 21 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: c2e65c64
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2734.973 ; gain = 0.000 ; free physical = 4288 ; free virtual = 6933
+INFO: [Opt 31-389] Phase Retarget created 20 cells and removed 103 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 14d0f617d
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 2734.973 ; gain = 0.000 ; free physical = 4282 ; free virtual = 6927
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 8 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1baf1fa6d
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:04 . Memory (MB): peak = 2734.973 ; gain = 0.000 ; free physical = 4278 ; free virtual = 6923
+INFO: [Opt 31-389] Phase Sweep created 10 cells and removed 2 cells
+INFO: [Opt 31-1021] In phase Sweep, 25 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
+INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
+Phase 4 BUFG optimization | Checksum: 1baf1fa6d
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 2734.973 ; gain = 0.000 ; free physical = 4278 ; free virtual = 6922
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 17986f3ba
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2734.973 ; gain = 0.000 ; free physical = 4278 ; free virtual = 6922
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 1a6afade3
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2734.973 ; gain = 0.000 ; free physical = 4277 ; free virtual = 6922
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              20  |             103  |                                              1  |
+|  Constant propagation         |               0  |               8  |                                              0  |
+|  Sweep                        |              10  |               2  |                                             25  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2734.973 ; gain = 0.000 ; free physical = 4277 ; free virtual = 6922
+Ending Logic Optimization Task | Checksum: 1da55068f
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 2734.973 ; gain = 0.000 ; free physical = 4277 ; free virtual = 6922
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-12.664 | TNS=-1510.430 |
+INFO: [Power 33-23] Power model is not available for STARTUPE2
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 122 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 128 newly gated: 64 Total Ports: 244
+Number of Flops added for Enable Generation: 10
+
+Ending PowerOpt Patch Enables Task | Checksum: 1e5b3b724
+
+Time (s): cpu = 00:00:00.74 ; elapsed = 00:00:00.77 . Memory (MB): peak = 3358.336 ; gain = 0.000 ; free physical = 3925 ; free virtual = 6770
+Ending Power Optimization Task | Checksum: 1e5b3b724
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:23 . Memory (MB): peak = 3358.336 ; gain = 623.363 ; free physical = 3976 ; free virtual = 6821
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common MMCM/DPLL/XPLL driver.
+INFO: [Opt 31-1112] Starts optimizing BUFG(s) with a common driver.
+INFO: [Opt 31-1092] Phase BUFG optimization transformed 0 BUFG(s) to MBUFG(s).
+Ending Logic Optimization Task | Checksum: 1a45749f2
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3358.336 ; gain = 0.000 ; free physical = 3971 ; free virtual = 6817
+Ending Final Cleanup Task | Checksum: 1a45749f2
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 3358.336 ; gain = 0.000 ; free physical = 3971 ; free virtual = 6817
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3358.336 ; gain = 0.000 ; free physical = 3971 ; free virtual = 6817
+Ending Netlist Obfuscation Task | Checksum: 1a45749f2
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3358.336 ; gain = 0.000 ; free physical = 3971 ; free virtual = 6817
+INFO: [Common 17-83] Releasing license: Implementation
+45 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:01:10 ; elapsed = 00:00:44 . Memory (MB): peak = 3358.336 ; gain = 805.348 ; free physical = 3970 ; free virtual = 6816
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3358.336 ; gain = 0.000 ; free physical = 3938 ; free virtual = 6785
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3358.336 ; gain = 0.000 ; free physical = 3931 ; free virtual = 6780
+INFO: [Common 17-1381] The checkpoint '/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.runs/impl_1/rvfpganexys_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:16 . Memory (MB): peak = 3358.336 ; gain = 0.000 ; free physical = 3862 ; free virtual = 6731
+INFO: [runtcl-4] Executing : report_drc -file rvfpganexys_drc_opted.rpt -pb rvfpganexys_drc_opted.pb -rpx rvfpganexys_drc_opted.rpx
+Command: report_drc -file rvfpganexys_drc_opted.rpt -pb rvfpganexys_drc_opted.pb -rpx rvfpganexys_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.runs/impl_1/rvfpganexys_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC BIIVRC-1] Bank IO standard internal Vref conflict: Conflicting INTERNAL_VREF constraint in Bank 34.  Some ports in this bank, for example, ddram_dq[0]   (SSTL18_II, Vref=0.900V) 
+ at site IOB_X1Y54 conflict with constrained INTERNAL_VREF of 0.750V.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_10_reg_0 has an input control pin ddr2/ldc/storage_10_reg_0/ENBWREN (net: ddr2/ldc/grant_reg_1) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_w/i_dst/i_spill_register/gen_spill_reg.a_full_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_10_reg_0 has an input control pin ddr2/ldc/storage_10_reg_0/ENBWREN (net: ddr2/ldc/grant_reg_1) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_w/i_dst/i_spill_register/gen_spill_reg.b_full_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_13_reg has an input control pin ddr2/ldc/storage_13_reg/ENARDEN (net: ddr2/ldc/read_r_buffer_syncfifo_re) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_sync[0].i_sync/reg_q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_13_reg has an input control pin ddr2/ldc/storage_13_reg/ENARDEN (net: ddr2/ldc/read_r_buffer_syncfifo_re) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_sync[1].i_sync/reg_q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_13_reg has an input control pin ddr2/ldc/storage_13_reg/ENARDEN (net: ddr2/ldc/read_r_buffer_syncfifo_re) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/wptr_q_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_13_reg has an input control pin ddr2/ldc/storage_13_reg/ENARDEN (net: ddr2/ldc/read_r_buffer_syncfifo_re) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/wptr_q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 ddr2/ldc/storage_10_reg_1 has an input control pin ddr2/ldc/storage_10_reg_1/ENBWREN (net: ddr2/ldc/grant_reg_1) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_w/i_dst/i_spill_register/gen_spill_reg.a_full_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 ddr2/ldc/storage_10_reg_1 has an input control pin ddr2/ldc/storage_10_reg_1/ENBWREN (net: ddr2/ldc/grant_reg_1) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_w/i_dst/i_spill_register/gen_spill_reg.b_full_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 43 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3847 ; free virtual = 6720
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: fe2a146b
+
+Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3847 ; free virtual = 6720
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3847 ; free virtual = 6719
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1103d8402
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3850 ; free virtual = 6725
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1f1e79652
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3735 ; free virtual = 6619
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1f1e79652
+
+Time (s): cpu = 00:00:21 ; elapsed = 00:00:12 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3735 ; free virtual = 6619
+Phase 1 Placer Initialization | Checksum: 1f1e79652
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3735 ; free virtual = 6619
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 12615b5cf
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:15 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3699 ; free virtual = 6583
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1018] Found 1522 candidate LUT instances to create LUTNM shape
+INFO: [Physopt 32-775] End 1 Pass. Optimized 750 nets or cells. Created 253 new cells, deleted 497 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[8] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_8__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/wren_bank_4 could not be optimized because driver swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/ram_core_reg_0_i_12__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[9] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_7__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[9] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_7__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/wren_bank_5 could not be optimized because driver swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/ram_core_reg_0_i_12__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[11] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_5__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[10] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_6__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/wren_bank_1 could not be optimized because driver swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/ram_core_reg_0_i_12__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[10] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_6__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[15] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[15] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_1__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[13] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_3__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[8] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_8__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[9] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_7__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/wren_bank_0 could not be optimized because driver swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/ram_core_reg_0_i_26 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[7] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_9__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[11] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_5__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[5] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_11__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[14] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_2__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[14] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_2__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[12] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_4__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[12] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_4__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[11] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_5__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[10] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_6__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[14] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_2__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[7] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_9__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/wren_bank_2 could not be optimized because driver swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/ram_core_reg_0_i_12__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[11] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_5__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[14] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_2__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/wren_bank_3 could not be optimized because driver swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/ram_core_reg_0_i_12__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[12] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_4__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[5] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_11__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[6] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_10__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[6] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_10__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[5]_3[5] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_11__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[10] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_6__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/wren_bank_6 could not be optimized because driver swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/ram_core_reg_0_i_12__1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[5] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_11__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[13] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_3__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[15] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_1__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[11] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_5__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[13] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_3__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[12] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_4__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[6] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_10__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[14] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_2__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[8] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_8__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[9] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_7__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[10] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_6__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[6] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_10__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[9] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_7__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[4]_4[7] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_9__2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[13] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/wren_bank_7 could not be optimized because driver swervolf/swerv_eh1/swerv/lsu/stbuf/RdPtrff/dffs/ram_core_reg_0_i_12__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[8] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_8 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[12] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_4__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[15] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_1__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[9] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_7 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[5] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_11 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[7] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_9__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[13] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_3__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[8] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_8__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[10] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_6__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[13] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_3__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[15] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_1__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[5] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_11__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[11] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_5__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[7] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_9__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[12] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[13] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_3__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[13] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_3__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[6] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_10__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[8] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_8__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[14] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_2__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[1]_7[15] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_1__5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[10] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[5] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_11__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[12] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_4__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[11] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_5__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[6] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_10__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[0]_8[10] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_6__6 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[9] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_7__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[12] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_4__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[8] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_8__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[8] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_8__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[3]_5[7] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_9__3 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[2]_6[9] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_7__4 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[15] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_1 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[7] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_9 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[5] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_11__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[11] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_5 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[14] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_2 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[7] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_9__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[14] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_2__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[6] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_10__0 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[7]_1[6] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_10 could not be replicated
+INFO: [Physopt 32-117] Net swervolf/swerv_eh1/mem/addr_bank[6]_2[15] could not be optimized because driver swervolf/swerv_eh1/mem/ram_core_reg_0_i_1__0 could not be replicated
+INFO: [Physopt 32-68] No nets found for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3710 ; free virtual = 6595
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |          253  |            497  |                   750  |           0  |           1  |  00:00:02  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |          253  |            497  |                   750  |           0  |           8  |  00:00:03  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 2ade1e34d
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:00:53 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3693 ; free virtual = 6579
+Phase 2.2 Global Placement Core | Checksum: 1e23c6946
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3693 ; free virtual = 6579
+Phase 2 Global Placement | Checksum: 1e23c6946
+
+Time (s): cpu = 00:01:38 ; elapsed = 00:00:54 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3718 ; free virtual = 6603
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 12c62f498
+
+Time (s): cpu = 00:01:45 ; elapsed = 00:00:57 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3713 ; free virtual = 6599
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 18da939af
+
+Time (s): cpu = 00:01:56 ; elapsed = 00:01:03 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3700 ; free virtual = 6586
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 230cad622
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:04 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3690 ; free virtual = 6576
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 209eaeabc
+
+Time (s): cpu = 00:01:57 ; elapsed = 00:01:04 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3689 ; free virtual = 6576
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 25b1e06d5
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:01:14 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3695 ; free virtual = 6593
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1330f4bfb
+
+Time (s): cpu = 00:02:34 ; elapsed = 00:01:35 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3736 ; free virtual = 6665
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 16932bbd4
+
+Time (s): cpu = 00:02:37 ; elapsed = 00:01:38 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3905 ; free virtual = 6815
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 189896aba
+
+Time (s): cpu = 00:02:38 ; elapsed = 00:01:38 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3905 ; free virtual = 6815
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 18cab141a
+
+Time (s): cpu = 00:02:57 ; elapsed = 00:01:50 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 4029 ; free virtual = 6937
+Phase 3 Detail Placement | Checksum: 18cab141a
+
+Time (s): cpu = 00:02:57 ; elapsed = 00:01:50 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 4029 ; free virtual = 6937
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 18aadab05
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-33] Processed net clk_gen/o_rst_core_reg_1, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net clk_gen/o_rst_core_reg_2, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net clk_gen/rst_core, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net ddr2/ldc/FDPE_3_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 4 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 4, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 18aadab05
+
+Time (s): cpu = 00:03:16 ; elapsed = 00:01:58 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 4073 ; free virtual = 6983
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-16.571. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1a11121d9
+
+Time (s): cpu = 00:04:21 ; elapsed = 00:02:51 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3962 ; free virtual = 6934
+Phase 4.1 Post Commit Optimization | Checksum: 1a11121d9
+
+Time (s): cpu = 00:04:21 ; elapsed = 00:02:52 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3962 ; free virtual = 6934
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1a11121d9
+
+Time (s): cpu = 00:04:22 ; elapsed = 00:02:52 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3961 ; free virtual = 6933
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 1a11121d9
+
+Time (s): cpu = 00:04:22 ; elapsed = 00:02:52 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3961 ; free virtual = 6934
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3961 ; free virtual = 6934
+Phase 4.4 Final Placement Cleanup | Checksum: 14fd71b42
+
+Time (s): cpu = 00:04:22 ; elapsed = 00:02:53 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3961 ; free virtual = 6934
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 14fd71b42
+
+Time (s): cpu = 00:04:23 ; elapsed = 00:02:53 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3961 ; free virtual = 6933
+Ending Placer Task | Checksum: 10dafaf96
+
+Time (s): cpu = 00:04:23 ; elapsed = 00:02:53 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3961 ; free virtual = 6933
+INFO: [Common 17-83] Releasing license: Implementation
+181 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:04:27 ; elapsed = 00:02:55 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 4013 ; free virtual = 6986
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 4010 ; free virtual = 6987
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3921 ; free virtual = 6957
+INFO: [Common 17-1381] The checkpoint '/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.runs/impl_1/rvfpganexys_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 4001 ; free virtual = 6994
+INFO: [runtcl-4] Executing : report_io -file rvfpganexys_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.14 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3996 ; free virtual = 6989
+INFO: [runtcl-4] Executing : report_utilization -file rvfpganexys_utilization_placed.rpt -pb rvfpganexys_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file rvfpganexys_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3999 ; free virtual = 6993
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3982 ; free virtual = 6978
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.571 | TNS=-2016.933 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1591e83c0
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:05 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3978 ; free virtual = 6955
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.571 | TNS=-2016.933 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 1591e83c0
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:05 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3977 ; free virtual = 6953
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.571 | TNS=-2016.933 |
+INFO: [Physopt 32-663] Processed net swervolf/vga/VGA_R_reg[1]_lopt_replica_1.  Re-placed instance swervolf/vga/VGA_R_reg[1]_lopt_replica
+INFO: [Physopt 32-735] Processed net swervolf/vga/VGA_R_reg[1]_lopt_replica_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.551 | TNS=-2017.101 |
+INFO: [Physopt 32-663] Processed net swervolf/vga/VGA_R_reg[0]_lopt_replica_1.  Re-placed instance swervolf/vga/VGA_R_reg[0]_lopt_replica
+INFO: [Physopt 32-735] Processed net swervolf/vga/VGA_R_reg[0]_lopt_replica_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.545 | TNS=-2017.275 |
+INFO: [Physopt 32-663] Processed net swervolf/vga/VGA_R[2].  Re-placed instance swervolf/vga/VGA_R_reg[2]
+INFO: [Physopt 32-735] Processed net swervolf/vga/VGA_R[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.545 | TNS=-2017.318 |
+INFO: [Physopt 32-663] Processed net swervolf/vga/VGA_R_reg[3]_lopt_replica_2_1.  Re-placed instance swervolf/vga/VGA_R_reg[3]_lopt_replica_2
+INFO: [Physopt 32-735] Processed net swervolf/vga/VGA_R_reg[3]_lopt_replica_2_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.538 | TNS=-2017.207 |
+INFO: [Physopt 32-663] Processed net swervolf/vga/VGA_R_reg[3]_lopt_replica_1.  Re-placed instance swervolf/vga/VGA_R_reg[3]_lopt_replica
+INFO: [Physopt 32-735] Processed net swervolf/vga/VGA_R_reg[3]_lopt_replica_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.524 | TNS=-2017.053 |
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R_reg[3]_lopt_replica_1.  Did not re-place instance swervolf/vga/VGA_R_reg[3]_lopt_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R_reg[3]_lopt_replica_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/Q[2].  Did not re-place instance swervolf/vga/wb_vga_reg_reg[2]
+INFO: [Physopt 32-81] Processed net swervolf/vga/Q[2]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net swervolf/vga/Q[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.514 | TNS=-2015.893 |
+INFO: [Physopt 32-662] Processed net swervolf/vga/Q[2].  Did not re-place instance swervolf/vga/wb_vga_reg_reg[2]
+INFO: [Physopt 32-702] Processed net swervolf/vga/Q[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0.  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[3]_i_3
+INFO: [Physopt 32-710] Processed net swervolf/vga/vga_dtg/D[3]. Critical path length was reduced through logic transformation on cell swervolf/vga/vga_dtg/VGA_R[3]_i_2_comp.
+INFO: [Physopt 32-735] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.503 | TNS=-2015.536 |
+INFO: [Physopt 32-663] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1.  Re-placed instance swervolf/vga/VGA_R_reg[2]_lopt_replica
+INFO: [Physopt 32-735] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.502 | TNS=-2015.748 |
+INFO: [Physopt 32-663] Processed net swervolf/vga/VGA_R_reg[1]_lopt_replica_2_1.  Re-placed instance swervolf/vga/VGA_R_reg[1]_lopt_replica_2
+INFO: [Physopt 32-735] Processed net swervolf/vga/VGA_R_reg[1]_lopt_replica_2_1. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.480 | TNS=-2015.464 |
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1.  Did not re-place instance swervolf/vga/VGA_R_reg[2]_lopt_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0.  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[3]_i_3
+INFO: [Physopt 32-572] Net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net swervolf/vga/vga_dtg/pix_row_save. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net swervolf/vga/vga_dtg/pix_row_save. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.463 | TNS=-2039.562 |
+INFO: [Physopt 32-572] Net swervolf/vga/vga_dtg/pix_row_save_repN was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/pix_row_save_repN.  Did not re-place instance swervolf/vga/vga_dtg/pix_row_save[0][3]_i_1_replica
+INFO: [Physopt 32-710] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0. Critical path length was reduced through logic transformation on cell swervolf/vga/vga_dtg/VGA_R[3]_i_3_comp_1.
+INFO: [Physopt 32-735] Processed net swervolf/vga/vga_dtg/pix_row_save_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.427 | TNS=-2039.702 |
+INFO: [Physopt 32-662] Processed net swervolf/vga/Q[4].  Did not re-place instance swervolf/vga/wb_vga_reg_reg[4]
+INFO: [Physopt 32-81] Processed net swervolf/vga/Q[4]. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net swervolf/vga/Q[4]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.420 | TNS=-2045.462 |
+INFO: [Physopt 32-662] Processed net swervolf/vga/Q[4]_repN.  Did not re-place instance swervolf/vga/wb_vga_reg_reg[4]_replica
+INFO: [Physopt 32-81] Processed net swervolf/vga/Q[4]_repN. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net swervolf/vga/Q[4]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.405 | TNS=-2039.504 |
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_5_n_0.  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[3]_i_5
+INFO: [Physopt 32-572] Net swervolf/vga/vga_dtg/VGA_R[3]_i_5_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_5_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_7_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_7
+INFO: [Physopt 32-735] Processed net swervolf/vga/VGA_R[3]_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.396 | TNS=-2039.159 |
+INFO: [Physopt 32-662] Processed net swervolf/vga/Q[4]_repN.  Did not re-place instance swervolf/vga/wb_vga_reg_reg[4]_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/Q[4]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_6_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_6
+INFO: [Physopt 32-572] Net swervolf/vga/VGA_R[3]_i_6_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_8_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_8
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R[3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/D[2].  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[2]_i_1
+INFO: [Physopt 32-572] Net swervolf/vga/vga_dtg/D[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/D[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_gen/clk_core. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1.  Did not re-place instance swervolf/vga/VGA_R_reg[2]_lopt_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/Q[4]_repN.  Did not re-place instance swervolf/vga/wb_vga_reg_reg[4]_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/Q[4]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0.  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[3]_i_3_comp_1
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_6_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_6
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_8_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_8
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R[3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/D[2].  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[2]_i_1
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/D[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_gen/clk_core. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.396 | TNS=-2039.159 |
+Phase 3 Critical Path Optimization | Checksum: 1591e83c0
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:10 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3967 ; free virtual = 6944
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.396 | TNS=-2039.159 |
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1.  Did not re-place instance swervolf/vga/VGA_R_reg[2]_lopt_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/Q[4]_repN.  Did not re-place instance swervolf/vga/wb_vga_reg_reg[4]_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/Q[4]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0.  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[3]_i_3_comp_1
+INFO: [Physopt 32-572] Net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_6_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_6
+INFO: [Physopt 32-572] Net swervolf/vga/VGA_R[3]_i_6_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_8_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_8
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R[3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/D[2].  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[2]_i_1
+INFO: [Physopt 32-572] Net swervolf/vga/vga_dtg/D[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/D[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_gen/clk_core. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1.  Did not re-place instance swervolf/vga/VGA_R_reg[2]_lopt_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R_reg[2]_lopt_replica_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/Q[4]_repN.  Did not re-place instance swervolf/vga/wb_vga_reg_reg[4]_replica
+INFO: [Physopt 32-702] Processed net swervolf/vga/Q[4]_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0.  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[3]_i_3_comp_1
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/VGA_R[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_6_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_6
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/VGA_R[3]_i_8_n_0.  Did not re-place instance swervolf/vga/VGA_R[3]_i_8
+INFO: [Physopt 32-702] Processed net swervolf/vga/VGA_R[3]_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net swervolf/vga/vga_dtg/D[2].  Did not re-place instance swervolf/vga/vga_dtg/VGA_R[2]_i_1
+INFO: [Physopt 32-702] Processed net swervolf/vga/vga_dtg/D[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net clk_gen/clk_core. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-16.396 | TNS=-2039.159 |
+Phase 4 Critical Path Optimization | Checksum: 1591e83c0
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:11 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3967 ; free virtual = 6944
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3967 ; free virtual = 6944
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-16.396 | TNS=-2039.159 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.175  |        -22.226  |            4  |              0  |                    14  |           0  |           2  |  00:00:05  |
+|  Total          |          0.175  |        -22.226  |            4  |              0  |                    14  |           0  |           3  |  00:00:05  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3967 ; free virtual = 6944
+Ending Physical Synthesis Task | Checksum: 1591e83c0
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:11 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3967 ; free virtual = 6944
+INFO: [Common 17-83] Releasing license: Implementation
+311 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:46 ; elapsed = 00:00:17 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3981 ; free virtual = 6958
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3981 ; free virtual = 6958
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3903 ; free virtual = 6946
+INFO: [Common 17-1381] The checkpoint '/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.runs/impl_1/rvfpganexys_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:22 ; elapsed = 00:00:14 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3930 ; free virtual = 6931
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC BIIVRC-1] Bank IO standard internal Vref conflict: Conflicting INTERNAL_VREF constraint in Bank 34.  Some ports in this bank, for example, ddram_dq[0]   (SSTL18_II, Vref=0.900V) 
+ at site IOB_X1Y54 conflict with constrained INTERNAL_VREF of 0.750V.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+Checksum: PlaceDB: cad45fdf ConstDB: 0 ShapeSum: c232dd35 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: fe244932
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:20 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3721 ; free virtual = 6771
+Post Restoration Checksum: NetGraph: a9f11e63 NumContArr: 54332acf Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: fe244932
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:20 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3726 ; free virtual = 6771
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: fe244932
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3705 ; free virtual = 6750
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: fe244932
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:21 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3705 ; free virtual = 6750
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1ad7a88d4
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:33 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3667 ; free virtual = 6707
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.207| TNS=-2007.300| WHS=-2.736 | THS=-1014.042|
+
+Phase 2 Router Initialization | Checksum: 1a318342d
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:37 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3659 ; free virtual = 6695
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00147974 %
+  Global Horizontal Routing Utilization  = 0.000426257 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 50901
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 50898
+  Number of Partially Routed Nets     = 3
+  Number of Node Overlaps             = 2
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 15ef7f288
+
+Time (s): cpu = 00:02:08 ; elapsed = 00:01:10 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3596 ; free virtual = 6651
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 14855
+ Number of Nodes with overlaps = 2088
+ Number of Nodes with overlaps = 941
+ Number of Nodes with overlaps = 565
+ Number of Nodes with overlaps = 229
+ Number of Nodes with overlaps = 55
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.411| TNS=-2565.090| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1b4f87ac5
+
+Time (s): cpu = 00:05:52 ; elapsed = 00:03:06 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3629 ; free virtual = 6694
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.736| TNS=-2461.690| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 22f52b4d6
+
+Time (s): cpu = 00:05:55 ; elapsed = 00:03:08 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3628 ; free virtual = 6693
+Phase 4 Rip-up And Reroute | Checksum: 22f52b4d6
+
+Time (s): cpu = 00:05:55 ; elapsed = 00:03:09 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3628 ; free virtual = 6693
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 192db42b5
+
+Time (s): cpu = 00:06:00 ; elapsed = 00:03:11 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3628 ; free virtual = 6693
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.411| TNS=-2553.203| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 242b62900
+
+Time (s): cpu = 00:06:02 ; elapsed = 00:03:11 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3619 ; free virtual = 6685
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 242b62900
+
+Time (s): cpu = 00:06:02 ; elapsed = 00:03:12 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3619 ; free virtual = 6685
+Phase 5 Delay and Skew Optimization | Checksum: 242b62900
+
+Time (s): cpu = 00:06:02 ; elapsed = 00:03:12 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3619 ; free virtual = 6685
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 26a5de4df
+
+Time (s): cpu = 00:06:08 ; elapsed = 00:03:15 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3619 ; free virtual = 6685
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-16.411| TNS=-2485.337| WHS=-1.875 | THS=-11.481|
+
+Phase 6.1 Hold Fix Iter | Checksum: 18244e8fc
+
+Time (s): cpu = 00:06:09 ; elapsed = 00:03:15 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3619 ; free virtual = 6684
+Phase 6 Post Hold Fix | Checksum: a5a4a7f4
+
+Time (s): cpu = 00:06:09 ; elapsed = 00:03:15 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3619 ; free virtual = 6684
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 19.402 %
+  Global Horizontal Routing Utilization  = 20.1085 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 92.7928%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_R_X39Y125 -> INT_R_X39Y125
+   INT_R_X43Y81 -> INT_R_X43Y81
+   INT_L_X38Y80 -> INT_L_X38Y80
+   INT_L_X42Y80 -> INT_L_X42Y80
+   INT_R_X39Y78 -> INT_R_X39Y78
+South Dir 1x1 Area, Max Cong = 94.5946%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X26Y118 -> INT_L_X26Y118
+   INT_L_X22Y116 -> INT_L_X22Y116
+   INT_L_X24Y114 -> INT_L_X24Y114
+   INT_L_X28Y114 -> INT_L_X28Y114
+   INT_L_X24Y111 -> INT_L_X24Y111
+East Dir 1x1 Area, Max Cong = 97.0588%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X10Y48 -> INT_L_X10Y48
+   INT_L_X18Y24 -> INT_L_X18Y24
+   INT_L_X14Y21 -> INT_L_X14Y21
+   INT_L_X18Y19 -> INT_L_X18Y19
+West Dir 1x1 Area, Max Cong = 97.0588%, Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
+   INT_L_X22Y116 -> INT_L_X22Y116
+   INT_L_X22Y115 -> INT_L_X22Y115
+   INT_R_X23Y113 -> INT_R_X23Y113
+   INT_L_X24Y113 -> INT_L_X24Y113
+   INT_R_X25Y92 -> INT_R_X25Y92
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.5 Sparse Ratio: 0.5
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.666667 Sparse Ratio: 1
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 1
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 1 Aspect Ratio: 0.666667 Sparse Ratio: 1
+
+Phase 7 Route finalize | Checksum: 16eed041f
+
+Time (s): cpu = 00:06:09 ; elapsed = 00:03:16 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3619 ; free virtual = 6684
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 16eed041f
+
+Time (s): cpu = 00:06:10 ; elapsed = 00:03:16 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3619 ; free virtual = 6684
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1c6badb10
+
+Time (s): cpu = 00:06:14 ; elapsed = 00:03:20 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3631 ; free virtual = 6697
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 1b80156e5
+
+Time (s): cpu = 00:06:20 ; elapsed = 00:03:23 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3615 ; free virtual = 6681
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-16.411| TNS=-2485.337| WHS=0.050  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1b80156e5
+
+Time (s): cpu = 00:06:20 ; elapsed = 00:03:23 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3615 ; free virtual = 6681
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:06:20 ; elapsed = 00:03:23 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3676 ; free virtual = 6743
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+329 Infos, 47 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:06:27 ; elapsed = 00:03:26 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3676 ; free virtual = 6743
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3676 ; free virtual = 6743
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3591 ; free virtual = 6743
+INFO: [Common 17-1381] The checkpoint '/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.runs/impl_1/rvfpganexys_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 3366.340 ; gain = 0.000 ; free physical = 3629 ; free virtual = 6726
+INFO: [runtcl-4] Executing : report_drc -file rvfpganexys_drc_routed.rpt -pb rvfpganexys_drc_routed.pb -rpx rvfpganexys_drc_routed.rpx
+Command: report_drc -file rvfpganexys_drc_routed.rpt -pb rvfpganexys_drc_routed.pb -rpx rvfpganexys_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Coretcl 2-168] The results of DRC are in file /run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.runs/impl_1/rvfpganexys_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file rvfpganexys_methodology_drc_routed.rpt -pb rvfpganexys_methodology_drc_routed.pb -rpx rvfpganexys_methodology_drc_routed.rpx
+Command: report_methodology -file rvfpganexys_methodology_drc_routed.rpt -pb rvfpganexys_methodology_drc_routed.pb -rpx rvfpganexys_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file /run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.runs/impl_1/rvfpganexys_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:31 ; elapsed = 00:00:11 . Memory (MB): peak = 3387.035 ; gain = 20.695 ; free physical = 3600 ; free virtual = 6678
+INFO: [runtcl-4] Executing : report_power -file rvfpganexys_power_routed.rpt -pb rvfpganexys_power_summary_routed.pb -rpx rvfpganexys_power_routed.rpx
+Command: report_power -file rvfpganexys_power_routed.rpt -pb rvfpganexys_power_summary_routed.pb -rpx rvfpganexys_power_routed.rpx
+INFO: [Power 33-23] Power model is not available for STARTUPE2
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+343 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:35 ; elapsed = 00:00:19 . Memory (MB): peak = 3419.055 ; gain = 32.020 ; free physical = 3596 ; free virtual = 6639
+INFO: [runtcl-4] Executing : report_route_status -file rvfpganexys_route_status.rpt -pb rvfpganexys_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file rvfpganexys_timing_summary_routed.rpt -pb rvfpganexys_timing_summary_routed.pb -rpx rvfpganexys_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file rvfpganexys_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file rvfpganexys_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file rvfpganexys_bus_skew_routed.rpt -pb rvfpganexys_bus_skew_routed.pb -rpx rvfpganexys_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: write_bitstream -force rvfpganexys.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC BIIVRC-1] Bank IO standard internal Vref conflict: Conflicting INTERNAL_VREF constraint in Bank 34.  Some ports in this bank, for example, ddram_dq[0]   (SSTL18_II, Vref=0.900V) 
+ at site IOB_X1Y54 conflict with constrained INTERNAL_VREF of 0.750V.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer ddr2/ldc/IOBUFDS/IBUFDS has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer ddr2/ldc/IOBUFDS_1/IBUFDS has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1840 rule limit reached: 20 violations have been found.
+WARNING: [DRC DPIP-1] Input pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 input swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 input swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__0 input swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__0 input swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__1 input swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__1 input swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__2 input swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__2 input swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__0 output swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__1 output swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__2 output swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 multiplier stage swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__0 multiplier stage swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__1 multiplier stage swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__2 multiplier stage swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[0]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[10]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[11]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[12]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[13]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[14]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[15]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[1]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[2]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[3]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[4]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[5]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[6]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[7]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[8]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC DPOR-1] Asynchronous load check: DSP swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e20 output is connected to registers with an asynchronous reset (swervolf/swerv_eh1/swerv/exu/mul_e1/prod_e3_ff/genblock.dff/dffs/dout_reg[9]). This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y0 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y1 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y10 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y11 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[26].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y12 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y13 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y14 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y15 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y16 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y17 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y18 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y19 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y20 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y21 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y22 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y23 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y24 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y25 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y26 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y27 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[22].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y28 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y29 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y30 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X0Y31 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y0 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y1 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[19].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y12 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y13 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[17].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y14 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y15 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[27].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y16 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y17 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y18 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y19 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y2 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y21 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y22 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[23].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X1Y3 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[25].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y0 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y1 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[31].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y12 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y13 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y15 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y16 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y17 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y18 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y19 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y2 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y20 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[16].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y21 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y22 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[30].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X2Y3 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[24].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y10 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y11 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y12 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y13 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[29].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y14 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y15 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[20].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y16 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y17 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y20 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y21 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y22 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_B) with RAM_EXTENSION_A attribute set to LOWER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC PDCN-137] enum_RAM_EXTENSION_A_not_NONE_connects_ADDRARDADDRL15_Tieoff: RAMB36E1 site RAMB36_X3Y23 has BlockRam (swervolf/vga/vga_image_mem/U0/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.CASCADED_PRIM36.ram_T) with RAM_EXTENSION_A attribute set to UPPER and ADDRARADDRL15 pin tied to LOGIC 0 (GND). In this case only the Lower BRAM will be used.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_10_reg_0 has an input control pin ddr2/ldc/storage_10_reg_0/ENBWREN (net: ddr2/ldc/grant_reg_1) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_w/i_dst/i_spill_register/gen_spill_reg.a_full_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_10_reg_0 has an input control pin ddr2/ldc/storage_10_reg_0/ENBWREN (net: ddr2/ldc/grant_reg_1) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_w/i_dst/i_spill_register/gen_spill_reg.b_full_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_13_reg has an input control pin ddr2/ldc/storage_13_reg/ENARDEN (net: ddr2/ldc/read_r_buffer_syncfifo_re) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_sync[0].i_sync/reg_q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_13_reg has an input control pin ddr2/ldc/storage_13_reg/ENARDEN (net: ddr2/ldc/read_r_buffer_syncfifo_re) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/gen_sync[1].i_sync/reg_q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_13_reg has an input control pin ddr2/ldc/storage_13_reg/ENARDEN (net: ddr2/ldc/read_r_buffer_syncfifo_re) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/wptr_q_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 ddr2/ldc/storage_13_reg has an input control pin ddr2/ldc/storage_13_reg/ENARDEN (net: ddr2/ldc/read_r_buffer_syncfifo_re) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_r/i_src/wptr_q_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_0/ADDRARDADDR[14] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 ddr2/ldc/storage_10_reg_1 has an input control pin ddr2/ldc/storage_10_reg_1/ENBWREN (net: ddr2/ldc/grant_reg_1) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_w/i_dst/i_spill_register/gen_spill_reg.a_full_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 ddr2/ldc/storage_10_reg_1 has an input control pin ddr2/ldc/storage_10_reg_1/ENBWREN (net: ddr2/ldc/grant_reg_1) which is driven by a register (cdc/i_axi_cdc/i_cdc_fifo_gray_w/i_dst/i_spill_register/gen_spill_reg.b_full_q_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[0]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[10]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[11]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[12]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[13]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[14]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[15]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[16]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[17]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[18]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[19]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[1]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[20]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[21]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[22]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[23]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[24]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2 has an input control pin swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ram_core_reg_2/ADDRARDADDR[13] (net: swervolf/swerv_eh1/mem/Gen_dccm_enable.dccm/mem_bank[0].dccm_bank/ADR[10]) which is driven by a register (swervolf/swerv_eh1/swerv/lsu/bus_intf/bus_buffer/ld_bus_dataff/dout_reg[25]) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 142 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./rvfpganexys.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/run/media/atharva/nux/ece540_rvfpga_sources/Labs/Proj_4_ImageProcessing/project_4_image_processing/project_4_image_processing.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri Feb 25 13:20:30 2022. For additional details about this file, please refer to the WebTalk help file at /home/atharva/software_installs/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+363 Infos, 190 Warnings, 1 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:47 ; elapsed = 00:00:35 . Memory (MB): peak = 3731.344 ; gain = 312.289 ; free physical = 3549 ; free virtual = 6581
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 25 13:20:30 2022...

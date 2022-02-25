@@ -1,8 +1,10 @@
 // vga.sv: VGA Display Controller Peripheral
-// Version: 1.0
+// Version: 1.1
 // Author: Atharva Lele <atharva@pdx.edu>
 //
-// Version Details: 1.0: B&W Static Image Display Support
+// Version Details:
+// 1.0: B&W Static Image Display Support
+// 1.1: Image processing techniques
 
 module vga_controller (
     input              clock, reset,
@@ -29,15 +31,10 @@ module vga_controller (
     logic [3:0]  vga_data;
     logic video_on;
 
-    // Sprite Control
-    // row, column of the sprite correspond to its top left
-    logic [11:0]     sprite_x;
-    logic [11:0]     sprite_y;
-
-    logic [3:0] sprite [3:0][3:0] = '{'{'1, '0, '0, '1},
-                                      '{'0, '1, '1, '0},
-                                      '{'0, '1, '1, '0},
-                                      '{'1, '0, '0, '1}};
+    // Registers needed for Robert's Cross
+    reg [3:0] pix_row_save[640:0] ;
+    reg [3:0] Gx, Gy, RC;
+    logic [10:0] i;
 
     // Block RAM module instance
     blk_mem_vga vga_image_mem (
@@ -64,26 +61,84 @@ module vga_controller (
 
     // Assign data to VGA
     always_ff @(posedge clock) begin : vga_data_assign
-        // Assign data to sprite_x and sprite_y
-        sprite_x <= wb_vga_reg[11:0];
-        sprite_y <= wb_vga_reg[27:16];
-        if (video_on == 1'b1)
-        begin
-            // Check if we are outputting sprite pixels
-            // If we are, replace the VGA data with sprite data
-            if ((pixel_row >= sprite_x) && (pixel_row < (sprite_x + 4)) &&
-                (pixel_column >= sprite_y) && (pixel_column < (sprite_y + 4)) && 
-                (sprite_x >= 0) && ((sprite_x + 4) < 640) &&
-                (sprite_y >= 0) && ((sprite_y + 4) < 480))
-            begin
-                    VGA_R <= (sprite[pixel_row - sprite_x][pixel_column - sprite_y] | vga_data);
-                    VGA_G <= (sprite[pixel_row - sprite_x][pixel_column - sprite_y] | vga_data);
-                    VGA_B <= (sprite[pixel_row - sprite_x][pixel_column - sprite_y] | vga_data);
-            end
-            else begin
+        if (video_on == 1'b1) begin
+            // Assign actual data
+            if (wb_vga_reg[1] === 1'b1) begin
+                // Toggle test image vertical bars generated from replicating bit4 of pixel column
+                if (pixel_column[4] === 1'b1) begin
+                    VGA_R <= 4'b0;
+                    VGA_G <= 4'b0;
+                    VGA_B <= 4'b0;
+                end
+                else begin
                     VGA_R <= vga_data;
                     VGA_G <= vga_data;
                     VGA_B <= vga_data;
+                end
+            end
+            else if (wb_vga_reg[2] === 1'b1) begin
+                // Toggle Threshold image if greyscale value is > {switches[7:5],switch2}
+                if (vga_data > {wb_vga_reg[7:5], wb_vga_reg[2]}) begin
+                    VGA_R <= 4'b0;
+                    VGA_G <= 4'b0;
+                    VGA_B <= 4'b0;
+                end
+                else begin
+                    VGA_R <= 4'b1111;
+                    VGA_G <= 4'b1111;
+                    VGA_B <= 4'b1111;
+                end
+            end
+            else if ((wb_vga_reg[3] === 1'b1) || (wb_vga_reg[4] === 1'b1)) begin
+                // Save data for Robert's cross
+                for (i = 640; i > 0; i = i - 1) begin
+                    pix_row_save[i] <= pix_row_save[i-1];
+                end
+
+                // Compute Gx, Gy, save pix_row
+                if (vga_data > pix_row_save[640])
+                    Gx <= vga_data - pix_row_save[640];
+                else
+                    Gx <= pix_row_save[640] - vga_data;
+                
+                if (pix_row_save[0] > pix_row_save[639])
+                    Gy <= pix_row_save[0] - pix_row_save[639];
+                else
+                    Gy <= pix_row_save[639] - pix_row_save[0];
+                
+
+                // Robert's cross
+                RC <= Gx + Gy;
+
+                // Save data for row
+                pix_row_save[0] <= vga_data;
+
+                // Assign data based on switch
+                if (wb_vga_reg[3] === 1'b1) begin
+                // Roberts cross edge detection greyscale image
+                    VGA_R <= RC;
+                    VGA_G <= RC;
+                    VGA_B <= RC;
+                end
+                else begin // if (wb_vga_reg[4] === 1'b1)
+                // Roberts cross greyscale image thresholded against {switches[7:5],switch4}
+                    if (RC > {wb_vga_reg[7:5], wb_vga_reg[4]}) begin
+                        VGA_R <= 4'b1111;
+                        VGA_G <= 4'b1111;
+                        VGA_B <= 4'b1111;
+                    end
+                    else begin
+                        VGA_R <= 4'b0;
+                        VGA_G <= 4'b0;
+                        VGA_B <= 4'b0;
+                    end
+                end
+            end
+            else begin
+                // Plain old image
+                VGA_R <= vga_data;
+                VGA_G <= vga_data;
+                VGA_B <= vga_data;
             end
         end
         else begin
@@ -102,12 +157,12 @@ module vga_controller (
     
     always @(posedge wb_clk, posedge wb_rst) begin
         if (wb_rst) begin
-            wb_vga_reg = 32'h00060006;
+            wb_vga_reg = 32'h00000000;
             wb_vga_ack_ff = 0 ;
         end
         else begin
-            wb_vga_reg = wb_vga_ack_ff && i_wb_we ? i_wb_dat : wb_vga_reg;
-            wb_vga_ack_ff = ! wb_vga_ack_ff & i_wb_stb & i_wb_cyc;
+            wb_vga_reg <= wb_vga_ack_ff && i_wb_we ? i_wb_dat : wb_vga_reg;
+            wb_vga_ack_ff <= ! wb_vga_ack_ff & i_wb_stb & i_wb_cyc;
         end
     end
     
